@@ -1,0 +1,150 @@
+.body {
+	width: 1004px;
+	height: 1482px;
+	border: 1px solid #315381;
+	margin: 0 auto;
+	margin-top: 0px;
+	text-align:left;
+	background-image: url(../image/News.jpg);
+}
+.nav_bulb{
+	margin-top: 80px;
+	margin-left: 250px;
+	width: 630px;
+	height: 50px;
+	/* background-color: red; */
+}
+/* 导航栏 */
+.nav {
+	float:left;
+	width: 530px;
+	height: 50px;
+	transform: rotate(6.5deg);
+	-ms-transform: rotate(6.5deg); /* Internet Explorer */
+	-moz-transform: rotate(6.5deg); /* Firefox */
+	-webkit-transform: rotate(6.5deg); /* Safari 和 Chrome */
+	-o-transform: rotate(6.5deg); /* Opera */
+}
+/* 留言板小灯泡*/
+.bulb {
+	margin-top:5px;
+	margin-left: 10px;
+	float:left;
+	width:84px;
+	height: 27px;
+/* 	background-color: black; */
+}
+/* 整个大的div */
+.content {
+	margin-top: 350px;
+	margin-left: 172px;
+	width: 640px;
+	height: 720px;
+	
+
+}
+
+.news_introduce{
+	width:640px;
+	height:60px;
+	margin-top: 1px;
+}
+.picture{
+	margin-top:4px;
+	height: 20px;
+	width: 40px;
+	background-repeat: no-repeat;
+	background-image: url(../image/news_title_pic.png);
+	float: left;
+
+}
+.title{
+	width:520px;
+	height:28px;
+	float: left;
+	
+
+}
+.clickRate{
+	width:120px;
+	height:30px;
+	float: left;
+	margin-left:50px;
+	font-size: 14px;
+}
+.viewall{
+	width:80px;
+	height:28px;
+ margin-top:3px; 
+	float: left;
+	font-size: 14px;
+	 text-align: center;
+}
+.blank{
+	width: 560px;
+	height: 30px;
+	float: left;
+
+}
+.auther{
+	width: 150px;
+	height: 30px;
+	float: left;
+	text-align:center;
+	margin-left: 30px;
+}
+.datetime{
+	width:160px;
+	height:30px;
+	float: left;
+
+}
+.pagebutton00{
+	width: 640px;
+	height: 40px;
+	margin-left: 172px;
+	margin-top: 10px;
+}
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+
+a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #000;
+	text-decoration: none;
+}
+a:hover{
+	color: #000;
+	text-decoration:underline;;
+}
+.pagebutton00 a:hover{
+	color: blue;
+	text-decoration:underline;
+}
+
+.title a:hover {
+	color: #4D9EF0;
+	font-size: 18px;
+	text-decoration: none;
+}
+.viewall a:hover {
+	color: #000;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.copyright{
+	margin-top: 150px;
+	margin-left:320px;
+	width: 380px;
+	height:50px;
+	float:left;
+	text-align:center;
+	
+}

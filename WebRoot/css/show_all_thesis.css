@@ -1,0 +1,144 @@
+#background {
+	width: 1004px;
+	height: 1482px;
+	border: 1px solid;
+	border-color: rgb(26, 57, 103);
+	text-align: left;
+	background-repeat: no-repeat;
+	background-image: url(../image/technology.jpg);
+}
+.nav_bulb{
+	margin-top: 80px;
+	margin-left: 250px;
+	width: 630px;
+	height: 50px;
+	/* background-color: red; */
+}
+/* µº∫Ω¿∏ */
+.nav {
+	float:left;
+	width: 530px;
+	height: 50px;
+	transform: rotate(6.5deg);
+	-ms-transform: rotate(6.5deg); /* Internet Explorer */
+	-moz-transform: rotate(6.5deg); /* Firefox */
+	-webkit-transform: rotate(6.5deg); /* Safari ∫Õ Chrome */
+	-o-transform: rotate(6.5deg); /* Opera */
+}
+/* ¡Ù—‘∞Â–°µ∆≈›*/
+.bulb {
+	margin-top:5px;
+	margin-left: 10px;
+	float:left;
+	width:84px;
+	height: 27px;
+/* 	background-color: black; */
+}
+
+.content {
+	margin-top: 350px;
+	margin-left: 172px;
+	width: 640px;
+	height: 720px;
+	
+
+}
+
+.thesis_introduce{
+	width:640px;
+	height:60px;
+}
+.picture{
+	margin-top:4px;
+	height: 20px;
+	width: 40px;
+	background-repeat: no-repeat;
+	background-image: url(../image/news_title_pic.png);
+	float: left;
+
+}
+.title{
+	width:390px;
+	height:28px;
+	float: left;
+
+}
+.clickRate{
+	width:130px;
+	height:28px;
+	float: left;
+	font-size: 14px;
+}
+.viewall{
+	width:80px;
+	height:28px;
+	float: left;
+	font-size: 14px;
+}
+.blank{
+	width: 140px;
+	height: 30px;
+	float: left;
+
+}
+.auther{
+	width: 300px;
+	height: 30px;
+	float: left;
+}
+.datetime{
+	width:160px;
+	height:30px;
+	float: left;
+
+}
+.pagebutton00{
+	width: 640px;
+	height: 40px;
+	margin-left: 172px;
+	margin-top: 10px;
+}
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+
+a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #000;
+	text-decoration: none;
+}
+a:hover{
+	color: #000;
+	text-decoration:underline;;
+}
+.pagebutton00 a:hover{
+	color: blue;
+	text-decoration:underline;
+}
+
+.title a:hover {
+	color: #4D9EF0;
+	font-size: 18px;
+	text-decoration: none;
+}
+.viewall a:hover {
+	color: #000;
+	font-size: 16px;
+	text-decoration: none;
+}
+
+.copyright{
+	margin-top: 140px;
+	margin-left:320px;
+	width: 380px;
+	height:50px;
+	/* border:1 solid red; */
+	float:left;
+	text-align:center;
+	
+}

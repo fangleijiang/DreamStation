@@ -1,0 +1,161 @@
+.body {
+	width: 1004px;
+	height: 1482px;
+	border: 1px solid #315381;
+	margin: 0 auto;
+	margin-top: 0px;
+	text-align: left;
+	background-image: url(../image/News_detail.jpg);
+}
+
+.nav_bulb{
+	margin-top: 80px;
+	margin-left: 250px;
+	width: 630px;
+	height: 50px;
+	/* background-color: red; */
+}
+/* 导航栏 */
+.nav {
+	float:left;
+	width: 530px;
+	height: 50px;
+	transform: rotate(6.5deg);
+	-ms-transform: rotate(6.5deg); /* Internet Explorer */
+	-moz-transform: rotate(6.5deg); /* Firefox */
+	-webkit-transform: rotate(6.5deg); /* Safari 和 Chrome */
+	-o-transform: rotate(6.5deg); /* Opera */
+}
+/* 留言板小灯泡*/
+.bulb {
+	margin-top:5px;
+	margin-left: 10px;
+	float:left;
+	width:84px;
+	height: 27px;
+/* 	background-color: black; */
+}
+/* 整个div */
+.content {
+	width: 699px;
+	height: 870px;
+	margin-left: 154px;
+	margin-top: 314px;
+ 	/* background-color:silver;  */
+}
+/* 新闻标题部分和logo */
+.title {
+	width: 698px;
+	height: 60px;
+	margin-top: 100px;
+	
+	font-size: 24px;
+	color: #FFFFFF;
+	/* background-color: yellow; */
+}
+/* 标题旁边的logo标志 */
+.logo {
+	height: 15px;
+	width: 30px;
+	background-repeat: no-repeat;
+	background-image: url(../image/news_title_pic.png);
+	float: left;
+	margin-left: 50px;
+	margin-top: 30px;
+	/* background-color: yellow; */
+}
+/* 新闻部分 */
+.title_word {
+	color: black;
+	width: 508px;
+	height: 25px;
+	float: left;
+	margin-left: 14px;
+	margin-top: 23px;
+	/* 	background-color: yellow; */}
+.author{
+	height: 22px;
+	margin-top:12px;
+	/* background-color: orange; */
+}
+/* 正文部分 */
+.article {
+	width: 642px;
+	height: 746px;
+	margin-top: 0px;
+	margin-left: 30px;
+	line-height: 25px;
+	overflow: auto;
+	/* background-color: yellow; */
+}
+/* 分页 */
+.paging {
+	width: 686px;
+	height: 30px;
+	margin-top: 47px;
+	margin-left: 6px;
+	/* background-color: yellow; */
+}
+
+.front {
+	height: 23px;
+	width: 300px;
+	float: left;
+	overflow: hidden;
+	/* background-color: olive; */
+}
+
+.back {
+	height: 23px;
+	width: 86px;
+	text-align: center;
+	float: left;
+	/* background-color: orange; */
+}
+
+.next {
+	height: 23px;
+	width: 300px;
+	float: right;
+	/* background-color: green; */
+	text-align: right;
+	overflow: hidden;
+}
+
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+
+a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: underline;;
+}
+
+.paging a:hover {
+	color: blue;
+	text-decoration: underline;
+}
+#bdshare {
+	margin-top: 8px;
+}
+
+.copyright {
+	margin-top: 20px;
+	margin-left: 300px;
+	width: 380px;
+	height: 50px;
+	float: left;
+	text-align: center;
+	margin-top: 20px;
+}

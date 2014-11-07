@@ -1,0 +1,197 @@
+.body {
+	width: 1004px;
+	height: 1482px;
+	border: 1px solid #315381;
+	margin: 0 auto;
+	margin-top: 0px;
+	text-align: left;
+	background-repeat: no-repeat;
+	background-image: url(../image/member.jpg);
+}
+.nav_bulb{
+	margin-top: 80px;
+	margin-left: 250px;
+	width: 630px;
+	height: 50px;
+	/* background-color: red; */
+}
+/* µº∫Ω¿∏ */
+.nav {
+	float:left;
+	width: 530px;
+	height: 50px;
+	transform: rotate(6.5deg);
+	-ms-transform: rotate(6.5deg); /* Internet Explorer */
+	-moz-transform: rotate(6.5deg); /* Firefox */
+	-webkit-transform: rotate(6.5deg); /* Safari ∫Õ Chrome */
+	-o-transform: rotate(6.5deg); /* Opera */
+}
+/* ¡Ù—‘∞Â–°µ∆≈›*/
+.bulb {
+	margin-top:5px;
+	margin-left: 10px;
+	float:left;
+	width:84px;
+	height: 27px;
+/* 	background-color: black; */
+}
+.content {
+	height: 1087px;
+	width: 762px;
+	margin-left: 121px;
+	margin-top: 141px;
+}
+
+.teacher {
+	height: 270px;
+	width: 760;
+
+}
+
+.teacher_message {
+	height: 178px;
+	width: 760px;
+	margin-top:80px;
+
+	float: left;
+}
+
+.teacher_message1 {
+	margin-top: 25px;
+	margin-left: 51.5px;
+	width: 90px;
+	height: 157px;
+	float: left;
+
+}
+
+.teacher_image1 {
+	width: 90px;
+	height: 125px;
+	/* background-color:yellow; */
+	float: left;
+}
+
+.teacher_name1 {
+	margin-top:4px;
+	width: 90px;
+	height: 23px;
+	float: left;
+
+}
+
+.programmer_nav {
+	height: 70px;
+	width: 667px;
+}
+
+.programmer_link {
+	height: 20px;
+	width: 65px;
+	margin-top: 45px;
+	margin-left: 20px;
+	float: left;
+	/* border: 1px solid red; */
+}
+
+.programmer_message {
+	height: 313px;
+	width: 760px;
+	margin-top: 10px;
+	
+}
+
+.programmer_message1 {
+	height: 130px;
+	width: 90px;
+	margin-left: 51.5px;
+	margin-top: 16px;
+	float: left;
+		
+}
+.programmer_image1 {
+	height: 110px;
+	width: 90px;
+
+	float: left;
+}
+.programmer_name1 {
+	width: 90px;
+	height: 20px;
+	float: left;
+	margin-top: 4px;
+}
+
+.painting_nav {
+	height: 70px;
+	width: 667px;
+	margin-top: 2px;
+	margin-left: 93px;
+}
+
+.painting_link {
+	height: 20px;
+	width: 65px;
+	margin-top: 45px;
+	float: right;
+}
+
+.painting_message {
+	height: 345px;
+	width: 760px;
+	margin-top: 6px;
+	
+}
+
+.painting_message1 {
+
+	height: 130px;
+	width: 90px;
+	margin-left: 51.5px;
+	margin-top: 19px;
+	float: left;
+}
+
+.painting_name1 {
+	width: 90px;
+	height: 20px;
+	float: left;
+	margin-top: 5px;
+}
+
+.painting_image1 {
+
+	height: 110px;
+	width: 90px;
+	
+	float: left;
+}
+
+a:link {
+	text-decoration: none;
+	color: #008FD1;
+}
+
+a:active {
+	color: #008FD1;
+}
+
+a:visited {
+	color: #008FD1;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+	color: blue;
+}
+
+.copyright{
+	margin-top:55px;
+	margin-left:300px;
+	width: 380px;
+	height:50px;
+	/* border:1 solid red; */
+	float:left;
+	text-align:center;
+}

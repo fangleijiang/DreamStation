@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	
+<bean id="dataSource" 
+	class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"> 
+  <property name="driverClassName" >
+  	<value>com.mysql.jdbc.Driver</value>
+  </property>
+  	
+  	
+  <property name="url" >
+  <value>jdbc:mysql://localhost:3306/dreamstation?useUnicode=true&amp;characterEncoding=utf8</value>
+  </property>
+ 
+ 		 <property name="username" value="root"/> 
+ 		 <property name="password" value="123456"/> 
+</bean> 
+<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean" > 
+  		<property name="dataSource" > 
+   		<ref local="dataSource"/> 
+  		</property> 
+  
+  <property name="mappingResources" > 
+   <list> 
+  		<value>com/ds/bean/Culture.hbm.xml</value>
+   		<value>com/ds/bean/Linkus.hbm.xml</value>
+     	<value>com/ds/bean/Spirit.hbm.xml</value>
+     	<value>com/ds/bean/Admin.hbm.xml</value>
+    	 <value>com/ds/bean/Project.hbm.xml</value>
+    	 	<value>com/ds/bean/Message.hbm.xml</value>
+    	 		<value>com/ds/bean/News.hbm.xml</value>
+    	 		<value>com/ds/bean/Thesis.hbm.xml</value>
+    	 		<value>com/ds/bean/Index.hbm.xml</value>
+    	 		<value>com/ds/bean/Member.hbm.xml</value>
+   </list> 
+   
+  </property> 
+
+  <property name="hibernateProperties" > 
+   	<props> 
+   		 <prop key="hibernate.dialect"> 
+   			  org.hibernate.dialect.MySQLDialect 
+    </prop> 
+    	<prop key="hibernate.show_sql">true</prop> 
+    	<prop key="current_session_context_class">thread</prop>
+  	 </props> 
+  </property> 
+  
+</bean> 
+<!-- 团队文化 -->
+<bean id="culture_dao" class="com.ds.dao.impl.Culture_DAO_Impl" scope="singleton">
+<property name="sessionFactory">
+<ref bean="sessionFactory"/>
+</property>
+</bean>
+
+<bean id="culture_service" class="com.ds.service.impl.Culture_Service_Impl" >
+<property name="culture_dao">
+<ref bean="culture_dao"/>
+</property>
+</bean>
+
+<bean id="Culture_Action" class="com.ds.action.Culture_Action" scope="prototype">
+<property name="culture_service" ref="culture_service">
+</property>
+</bean>
+
+<!-- 联系我们 -->
+<bean id="linkus_dao" class="com.ds.dao.impl.Linkus_DAO_Impl" scope="singleton">
+<property name="sessionFactory">
+<ref bean="sessionFactory"/>
+</property>
+</bean>
+
+<bean id="linkus_service" class="com.ds.service.impl.Linkus_Service_Impl" >
+<property name="linkus_dao">
+<ref bean="linkus_dao"/>
+</property>
+</bean>
+
+<bean id="Linkus_Action" class="com.ds.action.Linkus_Action" scope="prototype">
+<property name="linkus_service" ref="linkus_service">
+</property>
+</bean>
+
+<!-- 团队精神 -->
+<bean id="spirit_dao" class="com.ds.dao.impl.Spirit_DAO_Impl" scope="singleton"> 
+<property name="sessionFactory">
+<ref bean="sessionFactory"/>
+</property>
+</bean>
+
+<bean id="spirit_service" class="com.ds.service.impl.Spirit_Service_Impl">
+<property name="spirit_dao">
+<ref bean="spirit_dao"/>
+</property>
+</bean>
+
+<bean id="Spirit_Action" class="com.ds.action.Spirit_Action" scope="prototype">
+<property name="spirit_service">
+<ref bean="spirit_service"/>
+</property>
+
+</bean>
+
+<!-- 管理员 -->
+
+<bean id="admin_dao" class="com.ds.dao.impl.Admin_DAO_Impl" scope="singleton"> 
+<property name="sessionFactory">
+<ref bean="sessionFactory"/>
+</property>
+</bean>
+
+<bean id="admin_service" class="com.ds.service.impl.Admin_Service_Impl">
+<property name="admin_dao">
+<ref bean="admin_dao"/>
+</property>
+</bean>
+
+<bean id="Admin_Action" class="com.ds.action.Admin_Action" scope="prototype">
+<property name="admin_service">
+<ref bean="admin_service"/>
+</property>
+</bean>
+
+<!-- 项目成果 -->
+<bean id="project_dao" class="com.ds.dao.impl.Project_DAO_Impl" scope="singleton">
+<property name="sessionFactory">
+<ref bean="sessionFactory"/>
+</property>
+</bean>
+
+<bean id="project_service" class="com.ds.service.impl.Project_Service_Impl">
+<property name="project_dao">
+<ref bean="project_dao"/>
+</property>
+</bean>
+
+<bean id="Project_Action" class="com.ds.action.Project_Action" scope="prototype">
+<property name="project_service">
+<ref bean="project_service"/>
+</property>
+</bean>
+
+<!-- 留言版 -->
+	<bean id="Message_dao" class="com.ds.dao.impl.Message_DAO_Impl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory"/>
+		</property>
+	</bean>
+   
+	
+	<bean id="Message_Service" class="com.ds.service.impl.Message_Service_Impl" scope="singleton">
+		<property name="message_dao" ref="Message_dao"></property>
+	</bean>
+	
+	
+	<bean id="Message_Action" class="com.ds.action.Message_Action" scope="prototype">
+		<property name="message_service" ref="Message_Service"></property>
+	</bean>
+	
+	<!-- 新闻 -->
+	<bean id="newsDao" class="com.ds.dao.impl.NewsDAOImpl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="newsService" class="com.ds.service.impl.Newsserviceimpl"
+		scope="singleton">
+		<property name="newsDao" ref="newsDao"></property>
+	</bean>
+	<bean id="News_Action" class="com.ds.action.News_Action" scope="prototype">
+		<property name="service">
+			<ref bean="newsService" />
+		</property>
+	</bean>
+	
+	
+
+<!-- 科技前沿 -->
+	<bean id="Thesis_dao" class="com.ds.dao.impl.Thesis_DAO_Impl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="Thesis_Service" class="com.ds.service.impl.Thesis_Service_Impl" scope="singleton">
+		<property name="thesis_dao" ref="Thesis_dao"></property>
+	</bean>
+	<bean id="Thesis_Action" class="com.ds.action.Thesis_Action"	scope="prototype">
+		<property name="thesis_service" ref="Thesis_Service"></property>
+	</bean>
+	
+	<!-- 首页管理 -->
+		<bean id="index_dao" class="com.ds.dao.impl.Index_DAO_Impl" scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+		</bean>
+		
+		<bean id="index_service" class="com.ds.service.impl.Index_Service_Impl" scope="singleton">
+		<property name="index_dao" ref="index_dao"></property>
+		</bean>
+		
+		<bean id="Index_Action" class="com.ds.action.Index_Action" scope="prototype">
+		<property name="index_service" ref="index_service"></property>
+		</bean>
+			<!--团队成员 -->
+	<bean id="memberDao" class="com.ds.dao.impl.Member_DAO_Impl"
+		scope="singleton">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="member_service" class="com.ds.service.impl.Member_Service_Impl">
+		<property name="memberDao">
+			<ref bean="memberDao" />
+		</property>
+	</bean>
+	<bean id="Member_Action" class="com.ds.action.Member_Action"
+		scope="prototype">
+		<property name="member_service">
+			<ref bean="member_service" />
+		</property>
+	</bean>
+	
+	
+		<!-- 分页配置 -->
+<bean id="pageDAO" class="com.ds.dao.impl.Page_DAO_Impl" scope="singleton">
+<property name="sessionFactory" ref="sessionFactory"></property>
+</bean>
+
+<bean id="page_Service" class="com.ds.service.impl.Page_Service_Impl">
+<property name="page_dao" ref="pageDAO"></property>
+</bean>
+
+<bean id="projectPage_Action" class="com.ds.action.Project_Action" scope="prototype" >
+<property name="page_service" ref="page_Service"></property>
+</bean>
+
+<bean id="MessagePage_Action" class="com.ds.action.Message_Action" scope="prototype" >
+<property name="page_service" ref="page_Service"></property>
+</bean>
+	<bean id="ThesisPage_Action" class="com.ds.action.Thesis_Action"
+		scope="prototype">
+		<property name="page_service" ref="page_Service"></property>
+	</bean>
+		<bean id="memberPage_Action" class="com.ds.action.Member_Action" scope="prototype">
+		<property name="page_service" ref="page_Service"></property>
+	</bean>
+	</beans>

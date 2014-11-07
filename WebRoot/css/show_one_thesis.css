@@ -1,0 +1,138 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+#background {
+	width: 1004px;
+	height: 1482px;
+	border: 1px solid;
+	border-color: rgb(26, 57, 103);
+	text-align: left;
+	background-repeat: no-repeat;
+	background-image: url(../image/technology_detail.jpg);
+}
+
+.nav_bulb{
+	margin-top: 80px;
+	margin-left: 250px;
+	width: 630px;
+	height: 50px;
+	/* background-color: red; */
+}
+/* µº∫Ω¿∏ */
+.nav {
+	float:left;
+	width: 530px;
+	height: 50px;
+	transform: rotate(6.5deg);
+	-ms-transform: rotate(6.5deg); /* Internet Explorer */
+	-moz-transform: rotate(6.5deg); /* Firefox */
+	-webkit-transform: rotate(6.5deg); /* Safari ∫Õ Chrome */
+	-o-transform: rotate(6.5deg); /* Opera */
+}
+/* ¡Ù—‘∞Â–°µ∆≈›*/
+.bulb {
+	margin-top:5px;
+	margin-left: 10px;
+	float:left;
+	width:84px;
+	height: 27px;
+/* 	background-color: black; */
+}
+
+.title {
+	width: 508px;
+	height: 30px;
+	margin-top: 334px;
+	margin-left: 249px;
+	/* background-color: yellow; */}
+.author{
+	width: 508px;
+	height: 30px;
+	margin-top: 15px;
+	margin-left: 250px;
+	/* background-color: olive; */
+}
+
+.content {
+	line-height: 25px;
+	overflow: auto;
+	margin-left: 180px;
+	width: 650px;
+	height: 745px;
+	/* background-color: silver; */
+}
+
+.pagebutton01 {
+	width: 687px;
+	height: 25px;
+	margin-left: 160px;
+	margin-top: 47px;
+	/* background-color: yellow; */
+}
+
+.up {
+	height: 25px;
+	width: 270px;
+	float: left;
+	text-align: left;
+	/* background-color: olive; */
+}
+
+.current {
+	width: 138px;
+	height: 25px;
+	float: left;
+	text-align: center;
+	/* background-color: orange; */
+}
+
+.down {
+	width: 277px;
+	height: 25px;
+	float: left;
+	text-align: right;
+	/* background-color: green; */
+}
+
+#bdshare {
+	width: 640px;
+	height: 33px;
+	margin-left: 172px;
+	margin-top: 5px;
+}
+
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+
+a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: underline;;
+}
+
+.pagebutton01 a:hover {
+	color: blue;
+	text-decoration: underline;
+}
+
+.copyright {
+	margin-top: 15px;
+	margin-left: 320px;
+	width: 380px;
+	height: 50px;
+	float: left;
+	text-align: center;
+}

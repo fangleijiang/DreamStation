@@ -1,0 +1,226 @@
+#background {
+	width: 1004px;
+	height: 1482px;
+	border: 1px solid;
+	border-color: rgb(26, 57, 103);
+	margin: 0 auto;
+	text-align: left;
+	background-repeat: no-repeat;
+	background-image: url(../image/Message_board.jpg);
+
+}
+.nav_bulb{
+	margin-top: 80px;
+	margin-left: 250px;
+	width: 630px;
+	height: 50px;
+	/* background-color: red; */
+}
+/* µº∫Ω¿∏ */
+.nav {
+	float:left;
+	width: 530px;
+	height: 50px;
+	transform: rotate(6.5deg);
+	-ms-transform: rotate(6.5deg); /* Internet Explorer */
+	-moz-transform: rotate(6.5deg); /* Firefox */
+	-webkit-transform: rotate(6.5deg); /* Safari ∫Õ Chrome */
+	-o-transform: rotate(6.5deg); /* Opera */
+}
+/* ¡Ù—‘∞Â–°µ∆≈›*/
+.bulb {
+	margin-top:5px;
+	margin-left: 10px;
+	float:left;
+	width:84px;
+	height: 27px;
+/* 	background-color: black; */
+}
+.content01{
+	width: 698px;
+	height: 263px;
+	margin-left: 154px;
+	margin-top: 280px;
+}
+.nikename01 {
+	width: 100px;
+	height: 36px;
+	margin-top:2px;
+	font-size:25px;
+	float: left;
+	text-align: center;
+	color: rgb(0, 143, 209);
+
+}
+.nikenametext {
+	border:thin;
+	width: 250px;
+	height: 38px;
+	background-color: rgb(216, 216, 216);
+	float: left;
+}
+.warn00{
+	width: 348px;
+	height: 38px;
+
+	color: rgb(0, 143, 209);
+	float: left;
+
+}
+.container01 {
+	margin-top: 10px;
+	width: 698px;
+	height: 165px;
+	background-color: rgb(216, 216, 216);
+	resize:none;
+	border:thin;
+	float: left;
+	resize:none;
+}
+
+.position {
+	width: 112px;
+	height: 38px;
+	font-size: 24px;
+	color: rgb(0, 143, 209);
+	font-weight: bold;
+	float: left;
+	margin-top: 12px;
+}
+.warn01{
+	width: 586px;
+	height: 38px;
+	color: rgb(0, 143, 209);
+	float: left;
+	text-align: right;
+	margin-top: 10px;
+}
+.page{
+	width:698px;
+	height:30px;
+	margin-top:26px;
+	margin-left: 154px;
+}
+.blank02{
+
+	height:40px;
+	float:left;
+	width:60px
+}
+.massage_count{
+	color:white;
+	font-weight:bold;
+	width:98px;
+
+	margin-top:10px;
+	float: left;
+}
+.massage_page{
+	width:540px;
+	text-align: right;
+	height:40px;
+	float: left;
+}
+
+.content02{
+	width:668px;
+	height:550px;
+	margin-left: 169px;
+	margin-top: 36px;
+	/* background-color: yellow; */
+}
+
+.content03 {
+	margin-top: 7px;
+	margin-left: 4px;
+	width: 658px;
+	height: 174px;
+	border:thin dashed #0EADF6;
+	
+
+}
+.content04{
+	margin-top: 5px;
+	margin-left: 10px;
+	width: 638px;
+	height: 168px;
+
+	
+	
+}
+.head_user {
+	margin-top:3px;
+	width:18px;
+	height:20px;
+	float: left;
+}
+.nickname02 {
+	width:500px;
+	height:24px;
+	float: left;
+}
+.commentTime {
+	width:120px;
+	float: left;
+	height:24px;
+	text-align: center;
+}
+.comment {
+	width:638px;
+	float: left;
+	line-height: 23px;
+}
+.admin_user {
+	margin-top:7.5px;
+	width:44px;
+	height:17px;
+	float: left;
+}
+.admin {
+margin-top:2px;
+	width:474px;
+	height:25px;
+	float: left;
+}
+.replyTime {
+margin-top:2px;
+	width:120px;
+	float: left;
+	height:25px;
+	text-align: center;
+}
+.reply {
+	width:638px;
+	float: left;
+	line-height: 26px;
+}
+.copyright{
+	margin-top: 100px;
+	margin-left:320px;
+	width: 380px;
+	height:50px;
+	/* border:1 solid red; */
+	float:left;
+	text-align:center;
+	
+}
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+
+a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #000;
+	text-decoration: none;
+}
+
+a:hover {
+	color:  rgb(216, 216, 216);
+	text-decoration: underline;
+}
+

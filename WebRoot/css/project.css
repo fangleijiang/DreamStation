@@ -1,0 +1,119 @@
+#background{
+width:1004px;
+height: 1482px;
+border: 1px solid ;
+border-color: rgb(26,57,103);
+margin:0 auto;
+text-align:left;
+background-repeat: no-repeat;
+background-image:url(../image/project.jpg);
+}
+.nav {
+	margin-top: 82px;
+	margin-left: 250px;
+	width: 530px;
+	height: 50px;
+	transform: rotate(6.5deg);
+	-ms-transform: rotate(6.5deg); /* Internet Explorer */
+	-moz-transform: rotate(6.5deg); /* Firefox */
+	-webkit-transform: rotate(6.5deg); /* Safari ºÍ Chrome */
+	-o-transform: rotate(6.5deg); /* Opera */
+}
+
+.body{
+	width:710px;
+	height:740px;
+ /*	background-color:red;*/
+	/* border:1px solid red; */
+	margin-left: 141.5px;
+	margin-top: 321px;
+}
+.image_content01{
+	width:336px;
+	height:357px;
+/* border:1px solid red; */
+	margin-top:9.5px;
+	margin-left:10px;
+	float:left;
+}
+.image00
+ {
+	width: 336px;
+	height: 226px;
+	/* border:1px solid red; */
+	float:left;
+/* 	background-color: orange; */
+}
+
+.content00{
+	width: 220px;
+	height: 110px;
+	margin-left:60px;
+	margin-top:10px;
+	margin-bottom:10px;
+   /* background-color: silver;  */
+	 float:left;
+	color:white;
+
+}
+
+.content01{
+	width: 220px;
+	height: 110px;
+	margin-left:110px;
+	margin-top:10px;
+	margin-bottom:10px;
+ /* background-color: silver; */
+	 float:left;
+	color:white;
+
+}
+.link{
+		width: 685px;
+		height: 25px;
+		margin-left: 151.5px;
+		margin-top:10px;
+	 	float:left;
+	 	text-align:right;
+/*	 	background-color: yellow;*/
+}
+.content02{
+	height: 48px;
+	width: 710px;
+	margin-top:24px;
+	font-size:35px;
+	margin-left: 141.5px;
+	color: white;
+	float:left;
+/*	background-color: black;*/
+}
+
+a:link {
+color:#C1C1C1;
+	text-decoration: none;
+}
+
+a:active {
+color:#C1C1C1;
+	text-decoration: none;
+}
+a:visited {
+color:#C1C1C1;
+	text-decoration: none;
+}
+
+a:hover {
+	color:#C1C1C1;
+	text-decoration: underline;
+}
+
+.copyright{
+	margin-top: 80px;
+	margin-left:320px;
+	width: 380px;
+	height:50px;
+	/* border:1 solid red; */
+	float:left;
+	text-align:center;
+	
+}

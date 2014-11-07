@@ -1,0 +1,74 @@
+
+#background{
+width:1004px;
+height: 1482px;
+border: 1px solid ;
+border-color: rgb(26,57,103);
+margin:0 auto;
+text-align:left;
+background-repeat: no-repeat;
+background-image:url(../image/spirit.jpg);
+}
+.nav_bulb{
+	margin-top: 80px;
+	margin-left: 250px;
+	width: 630px;
+	height: 50px;
+	/* background-color: red; */
+}
+/* µº∫Ω¿∏ */
+.nav {
+	float:left;
+	width: 530px;
+	height: 50px;
+	transform: rotate(6.5deg);
+	-ms-transform: rotate(6.5deg); /* Internet Explorer */
+	-moz-transform: rotate(6.5deg); /* Firefox */
+	-webkit-transform: rotate(6.5deg); /* Safari ∫Õ Chrome */
+	-o-transform: rotate(6.5deg); /* Opera */
+}
+/* ¡Ù—‘∞Â–°µ∆≈›*/
+.bulb {
+	margin-top:5px;
+	margin-left: 10px;
+	float:left;
+	width:84px;
+	height: 27px;
+/* 	background-color: black; */
+}
+.content1{
+    margin-top: 45px;
+    margin-left: 201px;
+    width: 600px;
+    height: 750px;
+	line-height:25px;
+    font-size:20px;
+
+
+}
+
+.content2{
+    font-size:35px;
+    margin-top: 330px;
+    margin-left: 260px;
+    width: 505px;
+    height: 40px;
+    background-color: 008FD1;
+    color: white;
+
+}
+a:link{ color:#000;text-decoration:none; }     
+a:active{ color:#000; text-decoration:none; }
+a:visited{ color:#000;text-decoration:none; }
+a:hover{ color:#000;text-decoration:underline; }
+
+.copyright{
+	margin-top: 120px;
+	margin-left:320px;
+	width: 380px;
+	height:50px;
+	/* border:1 solid red; */
+	float:left;
+	text-align:center;
+	
+}

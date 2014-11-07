@@ -1,0 +1,89 @@
+#background {
+	width: 1004px;
+	height: 1482px;
+	border: 1px solid;
+	border-color: rgb(26, 57, 103);
+	margin: 0 auto;
+	text-align: left;
+	background-repeat: no-repeat;
+	background-image: url(../image/teacher.jpg);
+}
+.nav_bulb{
+	margin-top: 80px;
+	margin-left: 250px;
+	width: 630px;
+	height: 50px;
+	/* background-color: red; */
+}
+/* µº∫Ω¿∏ */
+.nav {
+	float:left;
+	width: 530px;
+	height: 50px;
+	transform: rotate(6.5deg);
+	-ms-transform: rotate(6.5deg); /* Internet Explorer */
+	-moz-transform: rotate(6.5deg); /* Firefox */
+	-webkit-transform: rotate(6.5deg); /* Safari ∫Õ Chrome */
+	-o-transform: rotate(6.5deg); /* Opera */
+}
+/* ¡Ù—‘∞Â–°µ∆≈›*/
+.bulb {
+	margin-top:5px;
+	margin-left: 10px;
+	float:left;
+	width:84px;
+	height: 27px;
+/* 	background-color: black; */
+}
+.teacher_body{
+	width: 680px;
+	height:840px;
+	margin-left: 163px;
+	margin-top: 250px;
+}
+.teacher_image{
+	width: 400px;
+	height: 550px;
+	margin-left:140px;
+}
+.teacher_introduce{
+	width: 580px;
+	height:300px;
+	margin-left:50px;
+	margin-top:30px;
+	line-height: 26px;
+	
+}
+.goback{
+	width: 200px;
+	height:20px;
+	margin-left:50px;
+	margin-top:50px;
+}
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+
+a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #000;
+	text-decoration: none;
+}
+a:hover{
+	color: blue;
+	text-decoration:underline;;
+}
+.copyright{
+	margin-top:180px;
+	margin-left:300px;
+	width: 380px;
+	height:50px;
+	/* border:1 solid red; */
+	float:left;
+	text-align:center;
+}

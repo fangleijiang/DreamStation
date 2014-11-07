@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="com.ds.bean.Member" table="member">
+		<id name="id" column="id" type="int">
+			<generator class="increment" />
+		</id>
+		<property name="name" column="name" type="string"></property>
+		<property name="introduction" column="introduction" type="string"></property>
+		<property name="image_small" column="image_small" type="string"></property>
+		<property name="category" column="category" type="string"></property>
+		<property name="image_big" column="image_big" type="string"></property>
+		<property name="grade_major" column="grade_major" type="string"></property>
+		
+	</class>
+</hibernate-mapping>

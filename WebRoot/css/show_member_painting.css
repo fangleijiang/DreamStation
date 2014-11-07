@@ -1,0 +1,96 @@
+#background {
+	width: 1004px;
+	height: 1482px;
+	border: 1px solid;
+	border-color: rgb(26, 57, 103);
+	margin: 0 auto;
+	text-align: left;
+	background-repeat: no-repeat;
+	background-image: url(../image/painting.jpg);
+}
+.nav_bulb{
+	margin-top: 80px;
+	margin-left: 250px;
+	width: 630px;
+	height: 50px;
+	/* background-color: red; */
+}
+/* µº∫Ω¿∏ */
+.nav {
+	float:left;
+	width: 530px;
+	height: 50px;
+	transform: rotate(6.5deg);
+	-ms-transform: rotate(6.5deg); /* Internet Explorer */
+	-moz-transform: rotate(6.5deg); /* Firefox */
+	-webkit-transform: rotate(6.5deg); /* Safari ∫Õ Chrome */
+	-o-transform: rotate(6.5deg); /* Opera */
+}
+/* ¡Ù—‘∞Â–°µ∆≈›*/
+.bulb {
+	margin-top:5px;
+	margin-left: 10px;
+	float:left;
+	width:84px;
+	height: 27px;
+/* 	background-color: black; */
+}
+.painting_body{
+	width: 680px;
+	height:860px;
+	margin-left: 163px;
+	margin-top: 265px;
+}
+.painting{
+	width: 226px;
+	height: 170px;
+	float: left;
+}
+.painting_image{
+	height: 135px;
+	width: 100px;
+	margin-left:11px;
+	margin-top:20px;
+	float: left;
+}
+.painting_introduce{
+	height: 115px;
+	width: 100px;
+	margin-left:6px;
+	margin-top:35px;
+	float: left;
+	line-height: 30px;
+}
+.page{
+	width: 640px;
+	height: 40px;
+	margin-left: 172px;
+	margin-top: 10px;
+}
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+
+a:active {
+	color: #000;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #000;
+	text-decoration: none;
+}
+a:hover{
+	color: blue;
+	text-decoration:underline;;
+}
+.copyright{
+	margin-top:100px;
+	margin-left:300px;
+	width: 380px;
+	height:50px;
+	/* border:1 solid red; */
+	float:left;
+	text-align:center;
+}

@@ -1,0 +1,97 @@
+.background{
+	width:1004px;
+height: 1482px;
+border: 1px solid ;
+border-color: rgb(26,57,103);
+margin:0 auto;
+text-align:left;
+background-repeat: no-repeat;
+background-image:url(../image/show_all_project.jpg);
+	
+}
+.nav_bulb{
+	margin-top: 80px;
+	margin-left: 250px;
+	width: 630px;
+	height: 50px;
+	/* background-color: red; */
+}
+/* µº∫Ω¿∏ */
+.nav {
+	float:left;
+	width: 530px;
+	height: 50px;
+	transform: rotate(6.5deg);
+	-ms-transform: rotate(6.5deg); /* Internet Explorer */
+	-moz-transform: rotate(6.5deg); /* Firefox */
+	-webkit-transform: rotate(6.5deg); /* Safari ∫Õ Chrome */
+	-o-transform: rotate(6.5deg); /* Opera */
+}
+/* ¡Ù—‘∞Â–°µ∆≈›*/
+.bulb {
+	margin-top:5px;
+	margin-left: 10px;
+	float:left;
+	width:84px;
+	height: 27px;
+/* 	background-color: black; */
+}
+.body{
+	margin-top:310px;
+	width:700px;
+	height:800px;
+	margin-left:140px;
+	border:1px solid #2C70AF;
+	
+
+}
+.project{
+	width:680px;
+	height:780px;
+	margin-left:10px;
+	margin-top:10px;
+
+}
+.project_body{
+	width:680px;
+	height:780px;
+	margin-top:15px;
+	/* background-color: silver; */
+}
+.project_image{
+	width:200px;
+	height: 130px;
+	margin-left: 5px;
+	
+}
+.project_detail{
+	width:210px;
+	height:40px;
+/* 	background-color: yellow; */
+	margin-top: 5px;
+}
+
+.page_del{
+	width:600px;
+	height:30px;
+
+	margin-top:40px;
+		margin-left:160px;
+	float:left;
+}
+
+a:link{ color:#CDCDCD;text-decoration:none; }     
+a:active{ color:#CDCDCD; text-decoration:none; }
+a:visited{color:#CDCDCD;text-decoration:none; }
+a:hover{ color:#CDCDCD;text-decoration:underline; }
+
+.copyright{
+	margin-top: 90px;
+	margin-left:320px;
+	width: 380px;
+	height:50px;
+	/* border:1 solid red; */
+	float:left;
+	text-align:center;
+	
+}

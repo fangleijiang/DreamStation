@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+  <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="true" />
+<package name="default" namespace="/" extends="struts-default" >
+ 
+ <default-action-ref name="index" />
+    
+    
+        
+        <!-- 团队文化 -->
+        <action name="List_culture" class="Culture_Action" method="List_ALL">
+ 		<result>culture.jsp</result>
+ 		</action>
+ 		
+        <!-- 联系我们 -->
+        <action name="List_linkus" class="Linkus_Action" method="List_all">
+ 		<result>linkus.jsp</result>
+ 		</action>
+ 		
+        
+        
+        <!-- 团队精神 -->
+        <action name="List_spirit" class="Spirit_Action" method="List_all">
+ 		<result>spirit.jsp</result>
+ 		</action>
+ 		
+        <!-- 项目成果 -->
+       <action name="list_first_four" class="Project_Action" method="find_first_four">
+       <result>project.jsp</result>
+       </action>
+        <action name="list_all" class="Project_Action" method="find_all">
+       <result>show_all_project.jsp</result>
+        </action>
+       
+         <action name="show_project_details" class="Project_Action" method="find_By_id">
+        <result>show_project_details.jsp</result>
+        </action>
+        
+        
+        <!-- 项目分页 -->
+         <action name="project_page_Action" class="projectPage_Action" method="page_action">
+            <result>managerPage/admin_show_project.jsp</result>
+            </action>
+          <action name="client_project_page_Action" class="projectPage_Action" method="client_page_action">
+              <result>show_all_project.jsp</result>
+           </action>
+  
+  
+        <!-- 管理员登录验证 -->
+        <action name="admin_login" class="Admin_Action" method="login">
+        <result name="success">managerPage/back_manage.jsp</result>
+        <result name="input">admin_login.jsp</result>
+        </action>
+        
+        <action name="show_admin" class="Admin_Action" method="show_all_admin">
+        <result name="success">managerPage/admin_show_admin.jsp</result>
+        </action>
+        
+        <action name="save_admin" class="Admin_Action" method="save_admin">
+        <result name="success" type="redirectAction">show_admin</result>
+        </action>
+        <action name="delete_admin" class="Admin_Action" method="delete_admin">
+        <result name="success" type="redirectAction">show_admin</result>
+        </action>
+        <action name="list_admin_by_id" class="Admin_Action" method="list_by_id">
+        <result name="success">managerPage/admin_update_admin.jsp</result>
+        </action>
+        
+        <action name="update_admin" class="Admin_Action" method="update">
+        <result name="success" type="redirectAction">show_admin</result>
+        </action>
+        
+        
+        <!-- 留言版 -->
+		<action name="comment_message" class="Message_Action" method="saveMessage">
+			<result name="success" type="redirectAction">client_page_action</result>
+		</action>
+		
+		<action name="client_page_action" class="MessagePage_Action" method="client_page_action">
+			<result>/message.jsp</result>
+		</action>
+		
+		
+		
+		<!-- 新闻 -->
+		
+
+		<action name="listFrontNews" class="News_Action" method="ListFrontNews">
+			<result name="success">/News.jsp</result>
+		</action>
+
+		
+		<action name="Find_News_By_Id" class="News_Action" method="Find_News_By_Id">
+			<result name="success">/news_article.jsp</result>
+		</action>
+
+	
+		
+		
+		
+		<!-- 科技前沿 -->
+		
+		
+		<action name="client_list_Page" class="ThesisPage_Action"
+			method="client_page_action">
+			<result name="success">/show_all_thesis.jsp</result>
+		</action>
+		<action name="find_by_id" class="ThesisPage_Action" method="find_all_thesis">
+			<result name="success">/show_one_thesis.jsp</result>
+		</action>
+		
+		<!-- 首页管理 -->
+		<action name="list_info_to_index" class="Index_Action" method="find_All">
+		<result>/index2.jsp</result>
+		</action>	
+		
+		 <!--团队成员-->
+    
+      <action name="list_front_image" class="Member_Action" method="list_front_image">
+       <result>/member.jsp</result>
+         </action>
+         <action name="client_list_all_programer" class="memberPage_Action" method="client_list_all_member">
+        	<result name="success">/show_member_programer.jsp</result>
+        </action>
+        <action name="client_list_all_painting" class="memberPage_Action" method="client_list_all_member">
+        	<result name="success">/show_member_painting.jsp</result>
+        </action>
+        <action name="client_list_one_programer" class="Member_Action" method="Find_Member_By_Id">
+        	<result name="success">/show_one_programer.jsp</result>
+        </action>
+        <action name="client_list_one_painting" class="Member_Action" method="Find_Member_By_Id">
+        	<result name="success">/show_one_painting.jsp</result>
+        </action>
+        <action name="client_list_teacher" class="Member_Action" method="Find_Member_By_Id">
+        	<result name="success">/show_member_teacher.jsp</result>
+        </action>
+        
+
+        </package>
+      
+      
+      
+           
+      <!-- 以下是拦截器拦截的所有管理员action -->  
+        
+     <package name="admin" namespace="/" extends="struts-default">
+        	 <interceptors>
+				<interceptor name="adminInterceptor" class="com.interceptor.AdminInterceptor">
+			</interceptor>
+			</interceptors>
+
+		<global-results>
+					<result name="error">/admin_login.jsp</result>
+		</global-results>  
+	<!-- 拦截的对文化操作的action -->
+		<action name="admin_show_culture" class="Culture_Action" method="List_ALL">
+       	 	<result>managerPage/admin_show_culture.jsp</result>
+       	 		<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+	  	<action name="list_to_update" class="Culture_Action" method="List_by_id">
+        <result>managerPage/admin_update_culture.jsp</result>
+        <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+        
+        <action name="update_culture" class="Culture_Action" method="update">
+        <result type="redirectAction">admin_show_culture</result>
+        <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+        
+        <action name="delete_culture" class="Culture_Action" method="delete_culture">
+         <result type="redirectAction">admin_show_culture</result>
+         <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+      
+        <action name="save_culture" class="Culture_Action" method="save_culture">
+         <result type="redirectAction">admin_show_culture</result>
+         <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+        
+        	<!-- 拦截的对联系我们操作的action -->
+        
+        <action name="admin_show_info" class="Linkus_Action" method="List_all">
+        <result>managerPage/admin_show_linkinfo.jsp</result>
+         <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+        
+        <action name="delete_link_info" class="Linkus_Action" method="delete">
+         <result type="redirectAction">admin_show_info</result>
+          <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+        
+         <action name="update_link_info" class="Linkus_Action" method="List_By_Id">
+         <result>managerPage/admin_update_linku_info.jsp</result>
+          <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+         <action name="update_info" class="Linkus_Action" method="update">
+        <result type="redirectAction">admin_show_info</result>
+         <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+        
+         <!-- 拦截的对团队精神操作的action -->
+        
+        <action name="add_spirit" class="Spirit_Action" method="save">
+ 		<result type="redirectAction">admin_show_spirit</result>
+ 		<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+ 		</action>
+ 		
+ 		<action name="admin_show_spirit" class="Spirit_Action" method="List_all">
+ 		<result>managerPage/admin_show_spirit.jsp</result>
+ 		<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+ 		</action>
+ 		
+ 		<action name="delete_spirit" class="Spirit_Action" method="delete">
+ 		 <result type="redirectAction">admin_show_spirit</result>
+ 		 <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+ 		</action>
+ 		
+        <action name="list_spirit_to_update" class="Spirit_Action" method="find_By_id">
+        <result>managerPage/admin_update_spirit.jsp</result>
+        <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+        
+        <action name="update_spirit" class="Spirit_Action" method="update">
+        <result type="redirectAction">admin_show_spirit</result>
+        <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+        
+        <!-- 项目 -->
+         <action name="admin_list_all" class="Project_Action" method="find_all">
+        <result>managerPage/admin_show_project.jsp</result>
+        <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+        
+        <action name="delete_project" class="Project_Action" method="delete">
+        <result type="redirectAction">project_page_Action</result>
+        <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+        
+        <action name="list_project_to_update" class="Project_Action" method="find_By_id">
+        <result>managerPage/admin_update_project.jsp</result>
+        <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+         <action name="update_project" class="Project_Action" method="update">
+        <result type="redirectAction">project_page_Action</result>
+        <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+        <!-- 留言 -->
+        <action name="reply_message" class="Message_Action" method="replyMessage">
+			<result name="success">/managerPage/admin_update_message.jsp</result>
+			<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="update_message" class="Message_Action" method="updateMessage">
+			<result name="success" type="redirectAction">list_all_messages</result>
+			<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="delete_message" class="Message_Action" method="deleteMessage">
+			<result name="success"   type="redirectAction">list_all_messages</result>
+			<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		
+		 <action name="list_all_messages" class="MessagePage_Action" method="page_action">
+			<result>/managerPage/admin_show_message.jsp</result>
+			<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		
+		<!-- 新闻 -->
+		<action name="saveNews" class="News_Action" method="SaveNews">
+			<result name="success" type="redirectAction">listBackNews</result>
+			<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="listBackNews" class="News_Action" method="ListBackNews">
+			<result name="success">/managerPage/admin_show_news.jsp</result>
+			<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+
+		<action name="deleteNews" class="News_Action" method="RemoveNews">
+			<result name="success" type="redirectAction">listBackNews</result>
+			<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+
+		<action name="updatePNews" class="News_Action" method="Find_News_By_Id">
+			<result name="success">/managerPage/admin_update_news.jsp</result>
+			<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+			<action name="updateNews" class="News_Action" method="UpdateNews">
+			<result name="success" type="redirectAction">listBackNews</result>
+			<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		
+		<!-- 科技前沿 -->
+		<action name="save_thesis" class="Thesis_Action" method="saveThesis">
+			<result name="success" type="redirectAction">list_all_thesis</result>
+			<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+
+		<action name="delete_thesis" class="Thesis_Action" method="deleteThesis">
+			<result name="success" type="redirectAction">list_all_thesis</result>
+			<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="revise_thesis" class="Thesis_Action" method="reviseThesis">
+			<result name="success">/managerPage/admin_update_thesis.jsp</result>
+			<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="update_thesis" class="Thesis_Action" method="updateThesis">
+			<result name="success" type="redirectAction">list_all_thesis</result>
+			<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="list_all_thesis" class="ThesisPage_Action"
+			method="thesis_page_action">
+			<result name="success">/managerPage/admin_show_thesis.jsp</result>
+			<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		
+		<!-- 首页管理 -->
+		<action name="admin_list_all_index_info" class="Index_Action" method="find_All">
+		<result>/managerPage/admin_show_Indexinfo.jsp</result>
+		<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		<action name="admin_delete_pic" class="Index_Action" method="delete">
+		<result type="redirectAction">admin_list_all_index_info</result>
+		<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		
+		<action name="find_indexinfo_by_id" class="Index_Action" method="find_By_id">
+		<result>/managerPage/admin_update_Indexinfo.jsp</result>
+		<interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		
+		<!-- 团队成员 -->
+		 <action name="find_black_first_four" class="memberPage_Action" method="find_black_first_four">
+       <result>/managerPage/admin_show_member.jsp</result>
+       <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+         </action>
+          <action name="RemoveMember" class="Member_Action" method="RemoveMember">
+        <result type="redirectAction">find_black_first_four</result>
+        <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+           <action name="SaveMember" class="Member_Action" method="SaveMember">
+        <result type="redirectAction">find_black_first_four</result>
+        <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+           <action name="UpdateMember" class="Member_Action" method="UpdateMember">
+        <result type="redirectAction">find_black_first_four</result>
+        <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+         <action name="list_member_to_update" class="Member_Action" method="Find_Member_By_Id">
+        <result>/managerPage/admin_update_member.jsp</result>
+        <interceptor-ref name="adminInterceptor"></interceptor-ref>
+		 		 <interceptor-ref name="defaultStack"></interceptor-ref>
+        </action>
+		        <action name="findMemberByName" class="Member_Action" method="findUserByName">
+			<result name="success">/managerPage/listFoundMember.jsp</result>
+			<result name="login">/managerPage/noMemberFound.jsp</result>
+		</action>
+        </package>
+</struts>    

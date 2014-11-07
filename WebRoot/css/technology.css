@@ -1,0 +1,40 @@
+#background{
+width:1004px;
+height: 1482px;
+border: 1px solid ;
+border-color: rgb(26,57,103);
+text-align: left;
+background-repeat: no-repeat;
+background-image:url(../image/technology.jpg);
+}
+.bulb{
+	position: absolute;
+	left:1050px;
+	top:98px;
+}
+.nav
+{
+margin-top:88px;
+margin-left:280px;
+width:530px;
+height:50px;
+transform: rotate(6.5deg);
+	-ms-transform: rotate(6.5deg); /* Internet Explorer */
+	-moz-transform: rotate(6.5deg); /* Firefox */
+	-webkit-transform: rotate(6.5deg); /* Safari ºÍ Chrome */
+	-o-transform: rotate(6.5deg); /* Opera */
+
+
+}
+.content{
+	  margin-top: 323px;
+    margin-left: 143px;
+    width: 698px;
+    height: 804px;
+    color: 	white;
+   font-family:"·ÂËÎ";
+}
+a:link{ color:#000;text-decoration:none; }     
+a:active{ color:#000; text-decoration:none; }
+a:visited{ color:#000;text-decoration:none; }
+a:hover{ color:#000;text-decoration:underline; }

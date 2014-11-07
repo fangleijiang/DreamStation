@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="DreamStation"
+  id="myeclipse.1373186186784"
+  context-root="/DreamStation"
+  j2ee-spec="5.0"
+  archive="DreamStation.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+
